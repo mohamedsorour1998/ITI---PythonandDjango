@@ -1,0 +1,74 @@
+Lab2: 
+1 - Write a Python program that uses the math module to calculate 
+the area of a circle with a radius of 5. 
+2 - Create a custom Python module called my_module with a 
+function that takes a string as input and returns the reverse of the 
+string. Then write a Python program that imports the my_module 
+module and uses the reverse_string function to reverse the string 
+"Hello, world!". 
+3- Write a Python program that imports only the randint function 
+from the random module and uses it to generate a random integer 
+between 1 and 10.  
+4 - Write a Python program that imports the datetime module with 
+the alias dt and uses the now function to get the current date and 
+time. 
+5- Write a Python program that reads a file named example.txt and 
+counts the number of lines in the file. 
+6 - Write a Python program that reads a file named example.txt and 
+prints the contents of the file in reverse order. 
+7 - Write a Python program that reads a file named example.txt and 
+removes all newline characters from the file. 
+8 - Write a Python program that reads a file named example.txt and 
+writes its contents to a new file named copy. txt. 
+9 - Write a Python program that reads a file named example.txt and 
+prints the longest word in the file. 
+10 - Write a function that takes a list of integers as input and returns 
+the sum of all even numbers in the list. 
+11 - Write a function that takes a list of strings as input and returns a 
+new list containing only the strings that start with the letter "a". 
+12 - Write a function that takes a dictionary as input and returns a 
+new dictionary with the keys and values swapped (i.e., the keys 
+become the values and the values become the keys). 
+13 - Write a function that takes a list of numbers as input and 
+returns the largest and smallest numbers in the list. 
+14 - Write a function that takes a list of numbers as input and 
+returns a new list containing the squares of each number in the 
+input list. 
+15 - Write a function that takes an arbitrary number of lists as input 
+using *args and returns a new list that contains all the elements 
+from all the input lists. 
+16 - Write a function that takes a string as input and an arbitrary 
+number of keyword arguments using **kwargs. The function should 
+replace all instances of the keyword argument keys in the input 
+string with their corresponding values. 
+Async is advanced topic that needs good understanding [optional 
+quiz you are not required to solve it] 
+17 - Write an async function that sleeps for a specified number of 
+seconds and then prints a message to the console. 
+18 - Implement a Python program that downloads a single webpage 
+using aiohttp and prints the HTTP status code to the console. 
+19 - Write an async function that computes the sum of two numbers 
+and returns the result after a simulated delay using asyncio.sleep(). 
+20 - Implement a program that reads a list of URLs from a file, and 
+downloads the contents of each URL in parallel using asyncio. Print 
+the number of downloaded pages to the console. 
+21 - Write an async function that reads a file in chunks and returns 
+the contents of the file as a string. Use asyncio.sleep() to simulate 
+I/O delays between each chunk. 
+22 - Implement a program that spawns a new subprocess using 
+asyncio.create_subprocess_exec() and waits for it to complete. Print 
+the subprocess exit code to the console. 
+23 - Write an async function that generates a sequence of integers 
+from 1 to 10 using asyncio.sleep() to introduce a delay between each 
+number. Print each number to the console as it is generated.  
+24 - Implement a program that listens for incoming connections on a 
+specified port using asyncio. When a connection is received, send a 
+static message to the client and close the connection. 
+25 - Write an async function that reads data from a websocket using 
+the websockets library and prints it to the console. Use 
+asyncio.sleep() to introduce a delay between each received 
+message. 
+26 - Implement a program that downloads multiple files in parallel 
+using asyncio. Use the asyncio.Queue class to manage a pool of 
+worker tasks and the aiohttp library to download files. Print the 
+name of each downloaded file to the console. 
