@@ -1,0 +1,6 @@
+<h1>Question details:</h1>
+
+<h4>Question ID: {{question.id}}</h4>
+<h4>Question Text: {{question.question_text}}</h4>
+<h4>Question Published Date: {{question.pub_date}}</h4>
+<a href="{% url 'polls:vote' question.id %}">Vote on this question</a>

@@ -1,0 +1,54 @@
+{% comment %} add 3 buttons for signup, login, sign out , each button will call the apprrite view function {% endcomment %}
+{% if user.is_authenticated %}
+  <p>
+    <a href="{% url 'polls:logout' %}">Sign out</a>
+  </p>
+{% else %}
+  <p>
+    <a href="{% url 'polls:signup' %}">Sign up</a>
+  </p>
+  <p>
+    <a href="{% url 'polls:login' %}">Sign in</a>
+  </p>
+{% endif %}
+
+{% comment %} add a button for create new question {% endcomment %}
+{% for question in questions %}
+<h2>{{ question.question_text }}</h2>
+<p>Published on: {{ question.pub_date }}</p>
+{% comment %} add view this question details {% endcomment %}
+<p>
+  <a href="{% url 'polls:question_detail' question.id %}">View this question</a>
+</p>
+{% comment %} add Delete this question {% endcomment %}
+<p>
+  <a href="{% url 'polls:question_delete' question.id %}"
+    >Delete this question</a
+  >
+</p>
+{% comment %} create other question this question {% endcomment %}
+<p>
+  <a href="{% url 'polls:question_create' %}"
+    >Create other question</a
+  >
+
+  {% endfor %}
+</p>
+
+<div class="pagination">
+  <span class="step-links">
+    {% if page_obj.has_previous %}
+    <a href="?page=1">&laquo; first</a>
+    <a href="?page={{ page_obj.previous_page_number }}">&lsaquo; previous</a>
+    {% endif %}
+
+    <span class="current-page">
+      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+    </span>
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">next &rsaquo;</a>
+    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+    {% endif %}
+  </span>
+</div>

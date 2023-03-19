@@ -1,0 +1,10 @@
+<body>
+    <h1>Create question</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p><label for="question_text">Question:</label></p>
+        <p><input type="text" name="question_text" required></p>
+        <input type="submit" value="Save">
+    </form>
+    <a href="{% url 'polls:question_list' %}">Cancel</a>
+</body>
